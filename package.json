@@ -1,6 +1,6 @@
 {
   "name": "env-npm-token",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "从env环境变量中读取npm_token，放到npmrc中",
   "main": "index.js",
   "bin": {
