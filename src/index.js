@@ -57,7 +57,7 @@ function getNpmToken() {
 
 function writeNpmRC(envFile) {
   if (envFile) {
-    ENV_FILE = envFile
+    ENV_FILE = envFile;
   }
   const token = getNpmToken();
   const content = NPM_RC_TPL.replace(TOKEN_KEY, token);
@@ -69,6 +69,3 @@ function writeNpmRC(envFile) {
 
 
 module.exports = writeNpmRC;
-
-
-writeNpmRC();

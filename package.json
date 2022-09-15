@@ -10,7 +10,12 @@
     "bin/",
     "src/"
   ],
-  "scripts": {},
+  "scripts": {
+    "release": "standard-version --release-as patch && npm run bootstrap && git push --follow-tags origin master && npm publish",
+    "bootstrap": "node bin/env-npm-token env",
+    "lint": "eslint --ext .js,.ts .",
+    "lint:fix": "eslint --fix --ext .js,.ts ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/novlan1/env-npm-token.git"
