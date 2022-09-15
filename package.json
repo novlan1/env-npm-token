@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "release": "standard-version --release-as patch && npm run bootstrap && git push --follow-tags origin master && npm publish",
-    "bootstrap": "node bin/env-npm-token env",
+    "bootstrap": "node bin/env-npm-token",
     "lint": "eslint --ext .js,.ts .",
     "lint:fix": "eslint --fix --ext .js,.ts ."
   },
@@ -33,7 +33,8 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^9.4.0",
-    "figlet": "^1.5.2"
+    "figlet": "^1.5.2",
+    "log-symbols": "^4.1.0"
   },
   "devDependencies": {
     "eslint-config-light": "^1.0.4",

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const symbols = require('log-symbols');
 const root = process.cwd();
 
 
@@ -65,6 +66,7 @@ function writeNpmRC(envFile) {
   fs.writeFileSync(npmRCFile, content, {
     encoding: 'utf-8',
   });
+  console.log(symbols.success, `拷贝 ${NPM_TOKEN} 成功`);
 }
 
 

@@ -6,6 +6,14 @@ const figlet = require("figlet");
 const CLI_NAME = 'env-npm-token';
 
 program
+  .option('-f, --file-name <fileName>', 'env file name')
+  .description("cp npm token from env file") // 添加描述信息
+  .action((cwd) => {
+    require('../src/index')(cwd.fileName)
+  });
+
+
+program
   .command("env [fileName]") // 增加指令
   .description("cp npm token from env file") // 添加描述信息
   .action((fileName) => {
