@@ -1,0 +1,18 @@
+# http://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space # 缩进使用空格
+insert_final_newline = true # 是否添加文件末的空行
+max_line_length = 100 # 一行最多字符数
+trim_trailing_whitespace = true  # 是否删除末尾空格
+
+[*.md]
+max_line_length = 0
+trim_trailing_whitespace = false
+
+[COMMIT_EDITMSG]
+max_line_length = 0
